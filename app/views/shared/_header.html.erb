@@ -1,0 +1,33 @@
+
+<div id="header_top" class="container">
+
+</div>
+
+<div id="header_row" class="container">
+
+
+<div id="header_content" class="row">
+
+  <div class="oncol"></div>
+  <div class="threecol" id="title_container">
+    <h1 id='logo'>
+      <%= link_to RefinerySetting.find_or_set(:site_name, "C0d3scr@tH"), root_path %>
+    </h1>
+  </div>
+
+  <div class="eightcol last">
+    <%= render(:partial => "/shared/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+  </div>
+
+</div>
+<div class="row">
+  <div id="header_bottom" class="twelvecol"></div>
+</div>
+
+</div>
+<div id="header_shadow" class="container">
+
+</div>

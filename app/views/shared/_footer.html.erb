@@ -1,0 +1,19 @@
+
+<div id="footer_container">
+<div id="footer_top" class="container">
+
+</div>
+
+<div id="footer_row" class="container">
+<div class="row">
+
+<div class="eightcol"></div>
+  <div class="fourcol last">
+<p style="margin-top:10px;">
+  <%= t('.copyright', :year => Time.now.year,
+                      :site_name => RefinerySetting.find_or_set(:site_name, "Company Name")) %>
+</p>
+  </div>
+</div>
+</div>
+</div>
