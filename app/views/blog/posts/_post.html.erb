@@ -19,7 +19,9 @@
         </aside>
       <% end %>
     </section>
+     <div style="clear:right;"></div>
   </header>
+
   <%= @blog_post.body.html_safe %>
 
   <% if BlogPost::ShareThis.enabled? %>

@@ -54,16 +54,16 @@ body {
 
 .main_content {
   background-color: #dbdbdb;
-  min-height: 500px;
+  min-height: 400px;
   height: auto !important;
-  height: 500px;
+  /*height:500px;*/
   padding-top: 20px; }
 
 #footer_container {
   height: 70px;
   background-color: #a2a2a2;
-  position: absolute;
-  bottom: 0;
+  /*position:absolute;*/
+  /*bottom:0;*/
   width: 100%; }
 
 #footer_top {
@@ -73,4 +73,29 @@ body {
 #footer_row {
   background-color: #a2a2a2;
   height: auto !important;
-  margin: 0 auto -70px; }
+  /*margin: 0 auto -70px;*/ }
+
+/* Blog stuff */
+.blog_post header {
+  border-bottom: 1px solid #263136; }
+  .blog_post header h1 a {
+    color: #263136;
+    font-size: 1.4em;
+    text-decoration: none; }
+
+.blog_post header .details {
+  float: right;
+  font-style: italic; }
+
+#blog_post header {
+  border-bottom: 1px solid #263136; }
+
+#blog_post header .details {
+  float: right;
+  font-style: italic; }
+
+#blog_post p {
+  margin: 15px 0px 15px 0px; }
+
+.blog_post section p {
+  margin: 15px 0px 15px 0px; }

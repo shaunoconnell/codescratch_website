@@ -1,3 +1,8 @@
+
+<div class="container main_content">
+  <div class="row">
+
+
 <% content_for :body_content_title, @category.title %>
 
 <% content_for :body_content_left do %>
@@ -18,4 +23,8 @@
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
+
+    </div>
+  </div>
+
 <% content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>

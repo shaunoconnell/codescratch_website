@@ -1,12 +1,7 @@
-.blog_post header, .blog_post footer {
-  width: auto;
-}
-.blog_post .posted_at{
-}
-.blog_post header h1 a {
-    color:green;
-    font-size:12px;
-}
+
+/*.blog_post .posted_at{*/
+/*}*/
+
 .post_categories .filed_in {
   display: inline;
 }

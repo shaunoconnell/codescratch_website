@@ -1,7 +1,11 @@
 <% if post.live? %>
   <article class="blog_post" id="<%= dom_id(post) %>">
     <header>
+
+
       <h1><%= link_to post.title, blog_post_url(post) %></h1>
+
+
       <section class='details'>
         <time datetime="<%=l post.published_at.to_date, :format => :default %>" class='posted_at'>
           <%= t('blog.shared.posts.created_at', :when => l(post.published_at.to_date, :format => :short)) %>
@@ -19,6 +23,9 @@
           </aside>
         <% end %>
       </section>
+
+      <div style="clear:right;"></div>
+
     </header>
     <section class='clearfix'>
       <%= blog_post_teaser(post) %>

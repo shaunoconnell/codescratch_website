@@ -76,17 +76,17 @@ $header_height: 100px;
 
 .main_content {
     background-color:$color_four;
-    min-height:500px;
+    min-height:400px;
     height:auto !important;
-    height:500px;
+    /*height:500px;*/
     padding-top:20px;
 }
 
 #footer_container {
     height:70px;
     background-color:$color_three;
-    position:absolute;
-    bottom:0;
+    /*position:absolute;*/
+    /*bottom:0;*/
     width:100%;
 }
 #footer_top {
@@ -96,7 +96,34 @@ $header_height: 100px;
 #footer_row {
     background-color:$color_three;
     height: auto !important;
-	margin: 0 auto -70px;
+	/*margin: 0 auto -70px;*/
+}
+
+/* Blog stuff */
+.blog_post header {
+    border-bottom:1px solid $color_one;
+    h1 a {
+    color:$color_one;
+    font-size:1.4em;
+    text-decoration:none;
+    }
+}
+.blog_post header .details {
+    float:right;
+    font-style:italic;
+}
+#blog_post header {
+    border-bottom:1px solid $color_one;
+}
+#blog_post header .details {
+    float:right;
+    font-style:italic;
+}
+#blog_post p{
+    margin:15px 0px 15px 0px;
+}
+.blog_post section p{
+    margin:15px 0px 15px 0px;
 }
 
 

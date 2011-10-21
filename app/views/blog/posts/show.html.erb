@@ -1,4 +1,13 @@
+
 <% content_for :body_content_left do %>
+
+    <div class="container main_content">
+  <div class="row">
+
+
+    <div class="ninecol">
+
+
   <div id="show_blog_post">
     <%= render 'post' %>
   </div>
@@ -8,9 +17,9 @@
       <h2><%= t('.comments.title') %></h2>
       <% if (comments = @blog_post.comments.approved).any? %>
         <%= render :partial => "comment", :collection => comments %>
-      <% else %>
         <p>
-          <%= t('blog.shared.comments.none') %>.
+      <% else %>
+    <%= t('blog.shared.comments.none') %>.
         </p>
       <% end %>
 
@@ -45,15 +54,26 @@
       <% end %>
     </aside>
   <% end %>
+
+        </div>
 <% end %>
 
+
+
+
 <% content_for :body_content_right do %>
+    <div class="threecol last">
+
   <%= render :partial => "/blog/shared/categories" %>
   <%= render :partial => "/blog/shared/tags" %>
   <%= render :partial => "/blog/shared/posts" %>
   <%= render :partial => "/blog/shared/rss_feed" %>
   <%= blog_archive_list %>
+
+    </div>
+    </div>
 <% end %>
+      </div>
 
 <%= render :partial => "/shared/content_page", :locals => { :remove_automatic_sections => true }  %>
 
@@ -65,3 +85,5 @@
   <script src="http://w.sharethis.com/button/buttons.js"></script>
   <script>stLight.options({publisher:'<%= BlogPost::ShareThis.key %>'});</script>
 <% end if BlogPost::ShareThis.enabled? %>
+
+
