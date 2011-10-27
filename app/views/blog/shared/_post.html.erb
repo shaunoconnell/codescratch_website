@@ -31,13 +31,10 @@
       <%= blog_post_teaser(post) %>
     </section>
     <footer>
-      <p>
-        <%= link_to t('blog.shared.posts.read_more'), blog_post_url(post) %>
-      </p>
       <aside class='comment_count'>
         <% if BlogPost.comments_allowed? %>
           <% if post.comments.any? %>
-             (<%= pluralize(post.comments.approved.count, t('blog.shared.comments.singular')) %>)
+             (<%= link_to pluralize(post.comments.approved.count, t('blog.shared.comments.singular')), blog_post_url(post) %>)
           <% else %>
                 (<%= t('blog.shared.comments.none') %>)
           <% end %>

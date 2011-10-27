@@ -1,49 +1,46 @@
+<% content_for :body_content_left do %>
+
+    <div class="container main_content">
+      <div class="row">
+
+        <div class="ninecol">
 
 
-        <% content_for :body_content_left do %>
-
-            <div class="container main_content">
-  <div class="row">
-
-    <div class="ninecol">
-
-
-          <%=raw @page[Page.default_parts.first.to_sym] if Page.default_parts.any? %>
+          <%= raw @page[Page.default_parts.first.to_sym] if Page.default_parts.any? %>
 
           <% if @blog_posts.any? %>
-            <section id="blog_posts">
-              <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
-              <%= will_paginate @blog_posts %>
-            </section>
+              <section id="blog_posts">
+                <%= render :partial => "/blog/shared/post", :collection => @blog_posts %>
+                <%= will_paginate @blog_posts %>
+              </section>
 
 
-
-      <% else %>
-            <p><%= t('.no_blog_articles_yet') %></p>
+          <% else %>
+              <p><%= t('.no_blog_articles_yet') %></p>
           <% end %>
 
-                  </div>
-        <% end %>
+        </div>
+<% end %>
 
 
 
-        <% content_for :body_content_right do %>
+<% content_for :body_content_right do %>
 
-            <div class="threecol last">
+    <div class="threecol last">
 
-          <%=raw @page[Page.default_parts.second.to_sym] if Page.default_parts.many? %>
+      <%= raw @page[Page.default_parts.second.to_sym] if Page.default_parts.many? %>
 
-          <%= render :partial => "/blog/shared/categories" %>
-          <%= render :partial => "/blog/shared/tags" %>
-          <%= render :partial => "/blog/shared/rss_feed" %>
-          <%= blog_archive_list %>
+      <%= render :partial => "/blog/shared/categories" %>
+      <%= render :partial => "/blog/shared/tags" %>
+      <%= render :partial => "/blog/shared/rss_feed" %>
+      <%= blog_archive_list %>
 
-                     </div>
- </div>
+    </div>
+    </div>
     </div>
 
-        <% end %>
+<% end %>
 
-        <%= render :partial => "/shared/content_page" %>
-        <% content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>
+<%= render :partial => "/shared/content_page" %>
+<% content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>
 
