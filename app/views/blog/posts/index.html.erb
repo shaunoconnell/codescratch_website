@@ -3,6 +3,7 @@
     <div class="container main_content">
       <div class="row">
 
+
         <div class="ninecol">
 
 
@@ -20,26 +21,33 @@
           <% end %>
 
         </div>
+
+
+        <div class="threecol last">
+
+          <%= raw @page[Page.default_parts.second.to_sym] if Page.default_parts.many? %>
+
+          <%= render :partial => "/blog/shared/categories" %>
+          <%= render :partial => "/blog/shared/tags" %>
+          <%= render :partial => "/blog/shared/rss_feed" %>
+          <%= blog_archive_list %>
+
+        </div>
+      </div>
+    </div>
 <% end %>
 
 
 
 <% content_for :body_content_right do %>
 
-    <div class="threecol last">
 
-      <%= raw @page[Page.default_parts.second.to_sym] if Page.default_parts.many? %>
 
-      <%= render :partial => "/blog/shared/categories" %>
-      <%= render :partial => "/blog/shared/tags" %>
-      <%= render :partial => "/blog/shared/rss_feed" %>
-      <%= blog_archive_list %>
 
-    </div>
-    </div>
-    </div>
 
 <% end %>
+
+
 
 <%= render :partial => "/shared/content_page" %>
 <% content_for :stylesheets, stylesheet_link_tag('refinerycms-blog') %>
