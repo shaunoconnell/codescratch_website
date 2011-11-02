@@ -67,8 +67,6 @@ body {
   bottom: 0;
   display: block;
   z-index: 999;
-  /*position:absolute;*/
-  /*bottom:0;*/
   width: 100%; }
 
 #footer_top {
@@ -76,9 +74,7 @@ body {
   height: 2px; }
 
 #footer_row {
-  background-color: #a2a2a2;
-  /*height: auto !important;*/
-  /*margin: 0 auto -70px;*/ }
+  background-color: #a2a2a2; }
 
 /* Blog stuff */
 .blog_post header {
@@ -208,3 +204,27 @@ body {
 .avatar {
   width: 30px;
   height: 30px; }
+
+.vertical_contact_tab {
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  position: fixed;
+  /*top:260;*/
+  /*left:-40;*/
+  height: 30px;
+  width: 120px;
+  top: 190px;
+  left: -50px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #a2a2a2;
+  border: 1px solid #dbdbdb;
+  display: block;
+  color: #dbdbdb; }

@@ -90,8 +90,6 @@ $header_height: 100px;
     bottom:0;
     display:block;
     z-index:999;
-    /*position:absolute;*/
-    /*bottom:0;*/
     width:100%;
 }
 #footer_top {
@@ -100,17 +98,15 @@ $header_height: 100px;
 }
 #footer_row {
     background-color:$color_three;
-    /*height: auto !important;*/
-	/*margin: 0 auto -70px;*/
 }
 
 /* Blog stuff */
 .blog_post header {
     border-bottom:1px solid $color_one;
     h1 a {
-    color:$color_one;
-    font-size:1.4em;
-    text-decoration:none;
+        color:$color_one;
+        font-size:1.4em;
+        text-decoration:none;
     }
 }
 .blog_post header .details {
@@ -240,5 +236,29 @@ $header_height: 100px;
     height:30px;
 }
 
+.vertical_contact_tab {
+    writing-mode:tb-rl;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform: rotate(90deg);
+    position:fixed;
+    /*top:260;*/
+    /*left:-40;*/
+    height:30px;
+    width:120px;
+    top:190px;
+    left:-50px;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-right-radius: 10px;
+    padding-top:5px;
+    text-align:center;
+    vertical-align:middle;
+    background-color:$color_three;
+    border:1px solid $color_four;
+    display:block;
+    color:$color_four;
+}
 
 
