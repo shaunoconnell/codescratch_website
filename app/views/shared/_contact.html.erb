@@ -1,0 +1,32 @@
+<% content_for :javascript_libraries do %>
+    <%= javascript_include_tag 'jquery-1.7' %>
+<% end %>
+
+<div id="contact_form">TODO: put requestor email, subject, content, and submit button here.</div>
+<div id="contact_tab" class="vertical_contact_tab">contact us</div>
+
+<% content_for :javascripts do %>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var isSeen = false;
+
+            $("#contact_tab").click(function(evt) {
+                var movement = "-=400";
+                if (isSeen) {
+                    movement = "-=400";
+                } else {
+                    movement = "+=400"
+                }
+
+                $("#contact_tab").animate({
+                    left: movement
+                });
+                $("#contact_form").animate({
+                    left: movement
+                });
+                isSeen = !isSeen;
+            });
+        });
+    </script>
+<% end %>
